@@ -88,7 +88,7 @@
   }
 
   h1 {
-    font-family: "Radlush", sans-serif;
+    font-family: "Radlush", cursive !important;
     font-size: clamp(3rem, 7vw, 4rem);
     color: rgb(185, 80, 176);
     margin: 0;
@@ -129,7 +129,7 @@
   }
 
   .tag {
-    font-family: "Monolisa", monospace;
+    font-family: "Monolisa", Arial;
     font-size: clamp(1rem, 2.5vw, 1.2rem);
     color: #f0f0f0;
     background: linear-gradient(135deg, #6b2b89, #9b4dca);

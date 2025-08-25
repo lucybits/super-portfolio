@@ -31,5 +31,17 @@
     "svelte-motion": "^0.12.2",
     "svelte-scrollto": "^0.2.0",
     "tippy.js": "^6.3.7"
-  }
+  },
+  "description": "---",
+  "main": "rollup.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucybits/super-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucybits/super-portfolio/issues"
+  },
+  "homepage": "https://github.com/lucybits/super-portfolio#readme"
 }

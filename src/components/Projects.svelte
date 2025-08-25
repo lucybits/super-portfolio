@@ -156,23 +156,21 @@
 </section>
 
 <style>
-  :global(*) {
-    font-family: "Favorit", sans-serif;
-  }
-
   @font-face {
-    font-family: "Favorit";
+    font-family: "Favorit", sans-serif;
     src: url("/fonts/Favorit.ttf") format("truetype");
   }
 
   section {
+    font-family: "Favorit", sans-serif;
     padding: 4rem 2rem;
     max-width: 85rem;
     margin: 0 auto;
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-family: "Radlush", sans-serif;
+    font-size: 3.5rem;
     font-weight: bold;
     text-align: center;
     margin-bottom: 3rem;

@@ -1,5 +1,5 @@
 <script>
-  import { fade } from 'svelte/transition';
+  import { fade } from "svelte/transition";
 
   let isOpen = false;
 
@@ -14,15 +14,16 @@
     if (!element) return;
 
     const offset = 80;
-    const topPos = element.getBoundingClientRect().top + window.pageYOffset - offset;
+    const topPos =
+      element.getBoundingClientRect().top + window.pageYOffset - offset;
 
-    window.scrollTo({ top: topPos, behavior: 'smooth' });
+    window.scrollTo({ top: topPos, behavior: "smooth" });
 
     isOpen = false;
   };
 
   const handleKeydown = (event) => {
-    if (event.key === 'Enter' || event.key === ' ') {
+    if (event.key === "Enter" || event.key === " ") {
       toggleMenu();
     }
   };
@@ -70,11 +71,32 @@
     </button>
 
     <ul class="nav-links desktop">
-      <li><a href="#home" on:click={(e) => scrollToSection(e, '#home')}>Home</a></li>
-      <li><a href="#about" on:click={(e) => scrollToSection(e, '#about')}>About me</a></li>
-      <li><a href="#technologies" on:click={(e) => scrollToSection(e, '#technologies')}>Technologies</a></li>
-      <li><a href="#projects" on:click={(e) => scrollToSection(e, '#projects')}>Projects</a></li>
-      <li><a href="#contact" on:click={(e) => scrollToSection(e, '#contact')} class="contact-link">Contact</a></li>
+      <li>
+        <a href="#home" on:click={(e) => scrollToSection(e, "#home")}>Home</a>
+      </li>
+      <li>
+        <a href="#about" on:click={(e) => scrollToSection(e, "#about")}
+          >About me</a
+        >
+      </li>
+      <li>
+        <a
+          href="#technologies"
+          on:click={(e) => scrollToSection(e, "#technologies")}>Technologies</a
+        >
+      </li>
+      <li>
+        <a href="#projects" on:click={(e) => scrollToSection(e, "#projects")}
+          >Projects</a
+        >
+      </li>
+      <li>
+        <a
+          href="#contact"
+          on:click={(e) => scrollToSection(e, "#contact")}
+          class="contact-link">Contact</a
+        >
+      </li>
     </ul>
   </div>
 
@@ -88,13 +110,42 @@
       tabindex="0"
       transition:fade
     >
-      <div class="mobile-menu-container" on:click|stopPropagation on:keydown|stopPropagation>
+      <div
+        class="mobile-menu-container"
+        on:click|stopPropagation
+        on:keydown|stopPropagation
+      >
         <ul class="nav-links mobile" transition:fade={{ duration: 200 }}>
-          <li><a href="#home" on:click={(e) => scrollToSection(e, '#home')}>Home</a></li>
-          <li><a href="#about" on:click={(e) => scrollToSection(e, '#about')}>About me</a></li>
-          <li><a href="#technologies" on:click={(e) => scrollToSection(e, '#technologies')}>Technologies</a></li>
-          <li><a href="#projects" on:click={(e) => scrollToSection(e, '#projects')}>Projects</a></li>
-          <li><a href="#contact" on:click={(e) => scrollToSection(e, '#contact')} class="contact-link">Contact</a></li>
+          <li>
+            <a href="#home" on:click={(e) => scrollToSection(e, "#home")}
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#about" on:click={(e) => scrollToSection(e, "#about")}
+              >About me</a
+            >
+          </li>
+          <li>
+            <a
+              href="#technologies"
+              on:click={(e) => scrollToSection(e, "#technologies")}
+              >Technologies</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              on:click={(e) => scrollToSection(e, "#projects")}>Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              on:click={(e) => scrollToSection(e, "#contact")}
+              class="contact-link">Contact</a
+            >
+          </li>
         </ul>
       </div>
     </div>
@@ -109,6 +160,7 @@
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid rgba(16, 15, 35, 0.97);
+    font-family: "Favorit", sans-serif;
   }
 
   .nav-container {
@@ -139,7 +191,7 @@
   .logo-heart {
     width: 20px;
     height: 20px;
-    filter: invert(1) brightness(2); 
+    filter: invert(1) brightness(2);
   }
 
   .nav-links {
@@ -292,7 +344,7 @@
     }
 
     .logo {
-      margin-left: 1rem; 
+      margin-left: 1rem;
     }
   }
 </style>

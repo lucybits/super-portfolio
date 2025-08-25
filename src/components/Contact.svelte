@@ -153,7 +153,7 @@
   });
 </script>
 
-<div class="contact-container" in:fade>
+<div id="contact-section" class="contact-container" in:fade>
   <div class="content-wrapper">
     <div class="left-grid">
       <div class="title-container">

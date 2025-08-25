@@ -15,10 +15,13 @@
       start: "top 80%",
       onEnter: () => {
         const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
-        tl.from(profileSection, { opacity: 0, y: 20, duration: 1 })
-          .from(profileSection.querySelectorAll("h1, p"), { opacity: 0, y: 10, stagger: 0.15, duration: 0.8 }, "-=0.8");
+        tl.from(profileSection, { opacity: 0, y: 20, duration: 1 }).from(
+          profileSection.querySelectorAll("h1, p"),
+          { opacity: 0, y: 10, stagger: 0.15, duration: 0.8 },
+          "-=0.8",
+        );
       },
-      toggleActions: "play reverse play reverse"
+      toggleActions: "play reverse play reverse",
     });
 
     ScrollTrigger.create({
@@ -26,14 +29,31 @@
       start: "top 80%",
       onEnter: () => {
         const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
-        tl.from(techSection, { opacity: 0, y: 20, duration: 1 })
-          .from(techSection.querySelectorAll("h1, p"), { opacity: 0, y: 10, stagger: 0.15, duration: 0.8 }, "-=0.8");
+        tl.from(techSection, { opacity: 0, y: 20, duration: 1 }).from(
+          techSection.querySelectorAll("h1, p"),
+          { opacity: 0, y: 10, stagger: 0.15, duration: 0.8 },
+          "-=0.8",
+        );
       },
-      toggleActions: "play reverse play reverse"
+      toggleActions: "play reverse play reverse",
     });
 
-    gsap.to(button, { y: -2, duration: 1.5, yoyo: true, repeat: -1, ease: "sine.inOut" });
+    gsap.to(button, {
+      y: -2,
+      duration: 1.5,
+      yoyo: true,
+      repeat: -1,
+      ease: "sine.inOut",
+    });
   });
+
+  function scrollToContact() {
+  const contactSection = document.getElementById("contact-section");
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
 </script>
 
 <div class="about-container">
@@ -45,7 +65,8 @@
     <div class="content">
       <p class="intro">
         I'm 20 and study at Instituto Tecnológico de Hermosillo, from
-        <span class="highlight">Hermosillo, Sonora, Mexico.</span> I follow web dev trends to keep my ideas fresh.
+        <span class="highlight">Hermosillo, Sonora, Mexico.</span> I follow web dev
+        trends to keep my ideas fresh.
       </p>
     </div>
   </div>
@@ -61,7 +82,8 @@
     <div class="content">
       <p class="intro">
         I started with HTML and CSS, then focused on
-        <span class="highlight">JavaScript and modern frameworks.</span> I build with React, Node.js, and now explore TypeScript and Next.js.
+        <span class="highlight">JavaScript and modern frameworks.</span> I build
+        with React, Node.js, and now explore TypeScript and Next.js.
       </p>
     </div>
   </div>
@@ -71,7 +93,11 @@
       <p>Interested in working together?</p>
       <p class="subtitle">Let's create something amazing!</p>
     </div>
-    <button class="contact-button" bind:this={button}>
+    <button
+      class="contact-button"
+      bind:this={button}
+      on:click={scrollToContact}
+    >
       <span class="button-text">Contact me</span>
     </button>
   </div>
@@ -110,11 +136,19 @@
   }
 
   .profile-section {
-    background: linear-gradient(to bottom, rgba(255, 124, 233, 0.08), rgba(6, 2, 17, 0.7));
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 124, 233, 0.08),
+      rgba(6, 2, 17, 0.7)
+    );
   }
 
   .tech-section {
-    background: linear-gradient(to bottom, rgba(76, 12, 140, 0.08), rgba(6, 2, 17, 0.7));
+    background: linear-gradient(
+      to bottom,
+      rgba(76, 12, 140, 0.08),
+      rgba(6, 2, 17, 0.7)
+    );
   }
 
   .title-container {
@@ -208,7 +242,7 @@
     height: 100%;
     background: linear-gradient(90deg, #ff7ce9f7, #cb7cff);
     transition: all 0.3s ease;
-    z-index: -1; 
+    z-index: -1;
   }
 
   .contact-button:hover {

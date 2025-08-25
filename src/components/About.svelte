@@ -10,7 +10,6 @@
   let button;
 
   onMount(() => {
-    // Animación sutil para profileSection al hacer scroll
     ScrollTrigger.create({
       trigger: profileSection,
       start: "top 80%",
@@ -22,7 +21,6 @@
       toggleActions: "play reverse play reverse"
     });
 
-    // Animación sutil para techSection al hacer scroll
     ScrollTrigger.create({
       trigger: techSection,
       start: "top 80%",
@@ -34,7 +32,6 @@
       toggleActions: "play reverse play reverse"
     });
 
-    // Animación suave de "flotación" del botón
     gsap.to(button, { y: -2, duration: 1.5, yoyo: true, repeat: -1, ease: "sine.inOut" });
   });
 </script>
@@ -211,7 +208,7 @@
     height: 100%;
     background: linear-gradient(90deg, #ff7ce9f7, #cb7cff);
     transition: all 0.3s ease;
-    z-index: -1; /* ahora detrás del texto */
+    z-index: -1; 
   }
 
   .contact-button:hover {

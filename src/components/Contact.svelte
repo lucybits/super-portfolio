@@ -100,7 +100,6 @@
   }
 
   onMount(() => {
-    // Animar letras del h1
     const h1Elements = document.querySelectorAll(".title-container h1");
     h1Elements.forEach((el) => {
       const text = el.textContent;
@@ -129,7 +128,6 @@
       );
     });
 
-    // Animar span.highlight
     const highlights = document.querySelectorAll(".highlight");
     highlights.forEach((el) => {
       gsap.fromTo(
@@ -150,7 +148,7 @@
       );
     });
 
-    // Forzar recalculo de ScrollTrigger al cargar para que los elementos ya visibles se animen
+
     ScrollTrigger.refresh();
   });
 </script>
@@ -218,7 +216,6 @@
 </div>
 
 <style>
-  /* Mantener tu CSS completo tal como lo tenías */
   @font-face {
     font-family: "Favorit";
     src: url("/fonts/Favorit.ttf") format("truetype");

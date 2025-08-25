@@ -222,7 +222,6 @@ gsap.from(".note-content", {
 </div>
 
 <style>
-  /* TODO TU CSS EXISTENTE, sin cambios */
   @font-face {
     font-family: "Radlush";
     src: url("/fonts/Radlush.ttf") format("truetype");
@@ -413,7 +412,7 @@ gsap.from(".note-content", {
 
   @media (max-width: 480px) {
     h1 {
-      font-size: clamp(3rem, 15vw, 5rem); /* Más grande en móvil */
+      font-size: clamp(3rem, 15vw, 5rem); 
       margin-top: 6vh;
     }
 

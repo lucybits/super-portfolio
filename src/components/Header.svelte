@@ -11,7 +11,6 @@
   let socialLinks;
 
   onMount(() => {
-    // Animación de entrada principal
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
     tl.from(header, { opacity: 0, y: -60, duration: 1.5 })
@@ -26,7 +25,6 @@
       gsap.from(links, { opacity: 0, y: 20, stagger: 0.3, duration: 1.5, ease: "power2.out" });
     }
 
-    // Animaciones continuas (loop)
     gsap.to(tag, { y: -5, duration: 1.8, yoyo: true, repeat: -1, ease: "sine.inOut" });
     gsap.to(name, { x: 5, duration: 2.5, yoyo: true, repeat: -1, ease: "sine.inOut" });
   });

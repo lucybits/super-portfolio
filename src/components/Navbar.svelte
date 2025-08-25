@@ -171,7 +171,6 @@
     transform: translateY(-1px);
   }
 
-  /* Botón Contacto centrado */
   .contact-link {
     background-color: #9d4edd;
     color: white !important;

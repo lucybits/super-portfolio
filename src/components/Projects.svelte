@@ -54,7 +54,6 @@
   ];
 
   onMount(() => {
-    // Animación de los artículos
     gsap.utils.toArray(".projects-grid article").forEach((el, i) => {
       gsap.fromTo(
         el,
@@ -75,7 +74,6 @@
       );
     });
 
-    // Animación de los tags
     gsap.utils.toArray(".tags .tag").forEach((tag, i) => {
       gsap.fromTo(
         tag,
